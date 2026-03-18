@@ -1,0 +1,17 @@
+{
+  "name": "ultrahcommands",
+  "version": "0.0.1-ALPHA",
+  "description": "Discord bot for the ultrah dev server",
+  "license": "ISC",
+  "author": "Shane Jumelet",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.3.1"
+  }
+}
