@@ -26,8 +26,5 @@ module.exports = {
 
   callback: (client, interaction) => {
     interaction.reply("Ban...");
-    for (let i; i < 500; step++) {
-      interaction.reply("WHY");
-    }
   },
 };
