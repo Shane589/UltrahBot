@@ -2,19 +2,20 @@ const {
   ApplicationCommandOptionType,
   PermissionFlagsBits,
   Client,
-  Interaction
+  Interaction,
 } = require("discord.js");
 
 module.exports = {
   /**
-   * 
-   * @param {Client} client 
-   * @param {Interaction} interaction 
+   *
+   * @param {Client} client
+   * @param {Interaction} interaction
    */
 
-  callback: async (client, interaction) {
-    const targetUserId = interaction.options.get('target-user').value();
-    const reason = interaction.options.get('reason')?.value() || "No reason provided.";
+  callback: async (client, interaction) => {
+    const targetUserId = interaction.options.get("target-user").value();
+    const reason =
+      interaction.options.get("reason")?.value() || "No reason provided.";
 
     await interaction.deferReply();
 
@@ -35,7 +36,9 @@ module.exports = {
     const botRolePosition = interaction.guild.members.me.roles.highest.position;
 
     if (targetUserRolePosition >= requestUserRolePosition) {
-      await interaction.editReply("You can not ban a higher rank than yourself ):");
+      await interaction.editReply(
+        "You can not ban a higher rank than yourself ):",
+      );
       return;
     }
   },
